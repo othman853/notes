@@ -1,0 +1,21 @@
+#!/bin/bash
+
+TASK=$1
+
+case $TASK in
+  install-dev)
+    pip install -r requirements.development
+    ;;
+  install-prod)
+    pip install -r requirements.production
+    ;;
+  lint)
+    pep8 src/ test/
+    ;;
+  test)
+    PYTHONPATH=$(pwd)/src pytest
+    ;;
+  *)
+    echo "No duty for $TASK"
+    ;;
+esac
