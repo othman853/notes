@@ -1,4 +1,6 @@
-# notes
+# Notes
+
+[![CircleCI](https://circleci.com/gh/othman853/notes.svg?style=svg)](https://circleci.com/gh/othman853/notes)
 
 Python lib to manage my notes.
 
