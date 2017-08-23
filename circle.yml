@@ -27,6 +27,13 @@ jobs:
           key: v1-dependencies-{{ checksum "requirements.development" }}
 
       - run:
+          name: run lint
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            ./tasks lint
+
+      - run:
           name: run tests
           command: |
             python3 -m venv venv
